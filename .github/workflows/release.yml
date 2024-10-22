@@ -24,6 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Builds new NetBox Docker Images
     env:
+      # Use docker.io for Docker Hub if empty
+      REGISTRY: ghcr.io
+      # github.repository as <account>/<repo>
+      IMAGE_NAME: ${{ github.repository }}
       GH_ACTION: enable
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       IMAGE_NAMES: docker.io/netboxcommunity/netbox quay.io/netboxcommunity/netbox ghcr.io/netbox-community/netbox
