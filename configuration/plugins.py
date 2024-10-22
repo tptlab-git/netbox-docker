@@ -11,3 +11,5 @@
 #     ADD YOUR SETTINGS HERE
 #   }
 # }
+
+plugins = ["netbox_dns", "netbox-secrets"]
